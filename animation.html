@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style_animation.css">
+    <link rel="icon" href="images/icône.png" type="image/png">
+    <title>LA NUIT DE L'INFO</title>
+</head>
+<body>
+
+    <div id="div">
+        <img id="logo" src="images/logo.png"></img>
+        <p class="lndi" id="lanuitde">LA NUIT DE</p>
+        <p class="lndi" id="linfo"><strong>L'INFO</strong></p>
+        <img id="cercle" src="images/cercle.png"></img>
+
+        <p id="phrase">Une compétition qui dure toute une nuit</p>
+    </div>
+        
+    <audio autoplay loop hidden>
+        <source type="audio/mp3" src="Stomp.mp3"></source>
+    </audio>
+
+    <div class="axeSoleil">
+        <div class="soleil"></div>
+    </div>
+
+<script>
+
+    setTimeout(function() {
+
+        let axeSoleil = document.querySelector(".axeSoleil");
+        axeSoleil.classList.add('active');
+        let soleil = document.querySelector(".soleil");
+        soleil.classList.add('active');
+
+    }, 7350);
+
+    let cercle = document.getElementById("cercle");
+    console.log(cercle.clientWidth);
+    
+    
+</script>
+    
+</body>
+</html>

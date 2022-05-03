@@ -1,0 +1,161 @@
+/* 1ERE ANIMATION */
+
+#div {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 98vh;
+}
+
+.lndi {
+    font-style: italic;
+    font-size: 40px;
+    transform: rotate(-15deg);
+    text-align: center;
+    color: #e2d1f1;
+    position: absolute;
+    margin-bottom: 7px;
+    opacity: 0;
+    animation: textappear 1s linear 4.5s normal forwards;
+}
+
+#lanuitde {
+    width: auto;
+    padding-bottom: 150px;
+    padding-left: 30px;
+}
+
+#linfo {
+    font-size: 70px;
+    color: #ffffff;
+    padding-bottom: 80px;
+    padding-left: 25px;
+}
+
+#phrase {
+    color: #ffffff;
+    font-family: Oswald, Extra-Light;
+    letter-spacing: 1.5px;
+    font-size: 2em;
+    padding-top: 65vh;
+    opacity: 0;
+    animation: waouh 1.5s ease-in-out 5.5s, textappear 1.5s linear 5.5s normal forwards;
+}
+
+#logo {
+    height: 115px;
+    position : absolute;
+    padding-right: 12px;
+    animation: grow 1s ease-in-out 1s 2 normal, décale 1.8s ease-out 3s 1 normal forwards;
+}
+
+svg {
+    position: absolute;
+    z-index: -1;
+}
+
+#cercle {
+    position : absolute;
+    height: 250px;
+    z-index: -1;
+    opacity: 0;
+    animation: tourne 3s linear 4.5s infinite, textappear 1s linear 4.5s normal forwards;
+}
+
+@keyframes tourne {
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes textappear {
+    80% {opacity: 0.8;}
+    100% {opacity: 1;}
+}
+
+@keyframes grow {
+    0% {height: 115px;}
+    50% {height: 180px;}
+    100% {height: 115px;}
+}
+
+@keyframes décale {
+    100% {transform:translateX(-27vh);}
+}
+
+@keyframes waouh {
+    0% {letter-spacing: 10px;}
+    100% {letter-spacing: 1.5px;}
+}
+
+@keyframes fondu {
+    100% {opacity: 0;}
+}
+
+body {
+    font-family: Raleway;
+    overflow: hidden;
+    background-image: linear-gradient(to top right, #160f30, #3e1851);
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(Oswald-ExtraLight.ttf);
+}
+
+/* 2e ANIMATION */
+
+.axeSoleil {
+
+    width: 87%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+.soleil {
+
+    height: 100px;
+    width: 100px;
+    background-color: yellow;
+    border-radius: 50%;
+    visibility: hidden;
+}
+
+.soleil.active {
+
+    animation: soleil 4.5s, fondu 1s linear 5s forwards;
+    visibility: visible;
+}
+
+.axeSoleil.active {
+
+
+    animation: 4.5s rotation forwards
+}
+
+@keyframes rotation {
+
+    100% {
+
+        transform: translateX(-50%) rotate(180deg);
+
+    }
+
+
+}
+
+@keyframes soleil {
+
+
+    50% {
+
+        background-color: lightgray;
+
+    }
+
+    100% {
+
+        background-color: yellow;
+
+    }
+}
